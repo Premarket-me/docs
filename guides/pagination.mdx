@@ -1,0 +1,31 @@
+---
+title: Pagination
+description: Offset/limit pagination patterns for list endpoints
+---
+
+## Parameters
+
+- `offset`: starting index
+- `limit`: page size
+
+## Basic Example
+
+```bash
+curl -sS "https://api.premarket.me/api/events/list?offset=0&limit=20"
+```
+
+## Next Page
+
+```bash
+curl -sS "https://api.premarket.me/api/events/list?offset=20&limit=20"
+```
+
+## Recommended Flow
+
+1. Start with `offset=0`.
+2. Increase offset by `limit` after each successful page.
+3. Stop when returned list is empty or shorter than `limit`.
+
+## Notes
+
+Use stable filters/sorting between pages to avoid duplicates or missed records when data changes.

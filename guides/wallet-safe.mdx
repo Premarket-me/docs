@@ -1,0 +1,36 @@
+---
+title: Wallet Safe Resolution
+description: How safe-wallet lookup works in Premarket endpoints
+---
+
+## Endpoints Using Safe Resolution
+
+- `/api/wallets/safe-wallets`
+- `/api/positions/aggregated`
+
+## Behavior
+
+For each EOA, backend resolves safe wallets by platform (Polymarket/Opinion).
+
+When safe lookup is unavailable or limited by upstream:
+
+- `safe_address` may be `null`
+- `error` may contain upstream reason
+
+## Example
+
+```json
+{
+  "eoa": "0x...",
+  "wallets": {
+    "polymarket": {"safe_address": null, "error": "Monthly quota exceeded"},
+    "opinion": {"safe_address": null, "error": "Monthly quota exceeded"}
+  }
+}
+```
+
+## Integration Advice
+
+- Treat `safe_address: null` as a valid response state.
+- Surface `error` to observability and support tooling.
+- Avoid aggressive polling on endpoints that trigger safe lookup.

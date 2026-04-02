@@ -1,0 +1,32 @@
+---
+title: Rate Limits
+description: Handling throttling and upstream limits
+---
+
+## What To Expect
+
+You can receive:
+
+- `429 Too Many Requests`
+- upstream-specific quota messages
+
+## Recommended Client Strategy
+
+1. Retry with backoff on `429`.
+2. Use jitter to avoid synchronized retries.
+3. Keep request fanout bounded.
+4. Cache stable results where possible.
+
+## Retry Example
+
+```bash
+# pseudo-flow
+# 1st retry: wait 1s
+# 2nd retry: wait 2s
+# 3rd retry: wait 4s
+```
+
+## Operational Guidance
+
+- Monitor upstream error rates separately from core API errors.
+- Do not block critical flows on quota-sensitive external endpoints.
