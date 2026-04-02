@@ -18,7 +18,8 @@
         "group": "Overview",
         "pages": [
           "index",
-          "getting-started"
+          "getting-started",
+          "x-twitter"
         ]
       },
       {
