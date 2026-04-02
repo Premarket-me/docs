@@ -7,6 +7,11 @@
     "light": "#0EA5E9",
     "dark": "#38BDF8"
   },
+  "logo": {
+    "light": "/images/premarket-logo.png",
+    "dark": "/images/premarket-logo.png"
+  },
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
@@ -17,19 +22,6 @@
             "pages": [
               "index",
               "getting-started"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "API Guides",
-            "pages": [
-              "guides/pagination",
-              "guides/rate-limits",
-              "guides/wallet-safe"
             ]
           }
         ]
