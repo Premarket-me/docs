@@ -16,6 +16,13 @@
     "tabs": [
       {
         "tab": "Overview",
+        "anchors": [
+          {
+            "anchor": "X (Twitter)",
+            "href": "https://x.com/pre_markets",
+            "icon": "/images/x-logo.svg"
+          }
+        ],
         "groups": [
           {
             "group": "Start",
