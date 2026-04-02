@@ -13,37 +13,20 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Overview",
-        "anchors": [
-          {
-            "anchor": "X (Twitter)",
-            "href": "https://x.com/pre_markets",
-            "icon": "/images/x-logo.svg"
-          }
-        ],
-        "groups": [
-          {
-            "group": "Start",
-            "pages": [
-              "index",
-              "getting-started"
-            ]
-          }
+        "group": "Overview",
+        "pages": [
+          "index",
+          "getting-started"
         ]
       },
       {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "Backend API",
-            "openapi": {
-              "source": "https://api.premarket.me/openapi.json",
-              "directory": "api-reference"
-            }
-          }
-        ]
+        "group": "API Reference",
+        "openapi": {
+          "source": "https://api.premarket.me/openapi.json",
+          "directory": "api-reference"
+        }
       }
     ]
   }
