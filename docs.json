@@ -17,7 +17,9 @@
       "anchors": [
         {
           "anchor": "X (Twitter)",
-          "href": "https://x.com/pre_markets"
+          "href": "https://x.com/pre_markets",
+          "icon": "x-twitter",
+          "iconType": "brands"
         }
       ]
     },
