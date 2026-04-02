@@ -13,13 +13,20 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "X (Twitter)",
+          "href": "https://x.com/pre_markets"
+        }
+      ]
+    },
     "groups": [
       {
         "group": "Overview",
         "pages": [
           "index",
-          "getting-started",
-          "x-twitter"
+          "getting-started"
         ]
       },
       {
