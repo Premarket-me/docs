@@ -15,7 +15,21 @@
           {
             "group": "Start",
             "pages": [
-              "index"
+              "index",
+              "getting-started"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "API Guides",
+            "pages": [
+              "guides/pagination",
+              "guides/rate-limits",
+              "guides/wallet-safe"
             ]
           }
         ]

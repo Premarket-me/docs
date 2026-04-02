@@ -1,0 +1,40 @@
+---
+title: Getting Started
+description: How to work with Premarket API
+---
+
+## Base URL
+
+`https://api.premarket.me`
+
+## OpenAPI
+
+- Schema: [https://api.premarket.me/openapi.json](https://api.premarket.me/openapi.json)
+- Swagger: [https://api.premarket.me/docs](https://api.premarket.me/docs)
+
+## First Request
+
+```bash
+curl -sS "https://api.premarket.me/api/events/list?offset=0&limit=20"
+```
+
+## Common Response Shape
+
+Most list endpoints return:
+
+- `count`: number of returned items
+- `total`: total items
+- `offset`, `limit`: pagination controls
+
+## Error Handling
+
+Use HTTP status code + payload details.
+
+- `4xx`: request/auth/validation issue
+- `5xx`: server or upstream issue
+
+## Auth Notes
+
+Some endpoints are public.
+Some endpoints require Bearer token and/or API key.
+Always check endpoint-specific requirements in API Reference.
